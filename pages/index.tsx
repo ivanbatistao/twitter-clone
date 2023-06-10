@@ -1,11 +1,12 @@
-import { NextPage } from "next"
+import Header from '@/components/Header';
+import { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
-    <div className="text-3xl text-sky-500">
-     Hello world!    
-    </div>
-  )
-}
+    <>
+      <Header label='Home' />
+    </>
+  );
+};
 
-export default Home
+export default Home;
