@@ -1,5 +1,3 @@
-import { ReducerAction } from 'react';
-
 interface InputPros {
   placeholder?: string;
   value?: string;
@@ -43,3 +41,5 @@ const Input: React.FC<InputPros> = ({
     </input>
   );
 };
+
+export default Input;
