@@ -21,6 +21,6 @@
       "@/styles/*": ["./styles/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Layout.tss"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Layout.tss", "pages/api/auth/[...nextauth].{js,ts}"],
   "exclude": ["node_modules"]
 }
