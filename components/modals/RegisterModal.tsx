@@ -3,6 +3,7 @@ import useLoginModal from '../../hooks/useLoginModal';
 import useRegisterModal from '../../hooks/useRegisterModal';
 import Input from '../Input';
 import Modal from '../Modal';
+import axios from 'axios';
 
 const RegisterModal = () => {
   const loginModal = useLoginModal();
@@ -11,7 +12,7 @@ const RegisterModal = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
-  const [userName, setUsername] = useState('');
+  const [username, setUsername] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   const onToggle = useCallback(() => {
@@ -25,7 +26,12 @@ const RegisterModal = () => {
     try {
       setIsLoading(true);
 
-      // TODO ADD REGISTER AND LOG IN
+      await axios.post('/api/register', {
+        email,
+        password,
+        username,
+        name,
+      });
 
       registerModal.onClose();
     } catch (error) {
@@ -51,7 +57,7 @@ const RegisterModal = () => {
       <Input
         placeholder='Username'
         onChange={(e) => setUsername(e.target.value)}
-        value={userName}
+        value={username}
         disabled={isLoading}
       />
       <Input
