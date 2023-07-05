@@ -28,7 +28,7 @@ const Input: React.FC<InputPros> = ({
         border-neutral-800
         rounder-md
         outline-none
-        text-white
+        text-black
         focus:border-sky-500
         focus:border-2
         transition
